@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RezervareCinema</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="log_in_hint">Log In</string>
+    <string name="title_cinema_ticket">CinemaTicket</string>
+    <string name="string_no_account">You don\'t have an account?</string>
+    <string name="string_sign_up">Sign Up!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up_hint">Sign Up</string>
+    <string name="repeat_password_hint">Repeat Password</string>
+    <string name="client_hint">Client</string>
+    <string name="admin_hint">Admin</string>
+    <string name="movies_textview">Movies</string>
+    <string name="seat_reservation_text">Seat Reservation</string>
+    <string name="next_seat_button">Next</string>
+    <string name="confirm_seats_text">Confirm Seats</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="phone_hint">Phone</string>
+    <string name="confirm_button_text">Confirm</string>
+    <string name="please_be_there_30_minutes_earlier_text">Please be there 30 minutes earlier</string>
+    <string name="i_accept_terms_conditions_text"><![CDATA[I accept Terms&Conditions]]></string>
+</resources>

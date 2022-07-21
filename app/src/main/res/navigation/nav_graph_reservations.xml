@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_reservations"
+    app:startDestination="@id/seatsFragment">
+
+    <fragment
+        android:id="@+id/seatsFragment"
+        android:name="com.example.rezervarecinemaiss.RezervationActivity.MoviesFragment"
+        android:label="fragment_seats"
+        tools:layout="@layout/fragment_movies" >
+        <action
+            android:id="@+id/go_to_seats_reservation"
+            app:destination="@id/seatFragment" />
+        <argument
+            android:name="userSession"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/seatFragment"
+        android:name="com.example.rezervarecinemaiss.RezervationActivity.SeatFragment"
+        android:label="fragment_seats"
+        tools:layout="@layout/fragment_seats" >
+        <action
+            android:id="@+id/go_to_confirmation_seats"
+            app:destination="@id/confirmSeatsFragment" />
+        <argument
+            android:name="movieSelected"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmSeatsFragment"
+        android:name="com.example.rezervarecinemaiss.RezervationActivity.ConfirmSeatsFragment"
+        android:label="fragment_confirm_seats"
+        tools:layout="@layout/fragment_confirm_seats" >
+        <argument
+            android:name="seatList"
+            app:argType="string" />
+        <argument
+            android:name="movieSelected"
+            app:argType="integer" />
+        <action
+            android:id="@+id/go_back_to_movies"
+            app:destination="@id/seatsFragment" />
+    </fragment>
+</navigation>
