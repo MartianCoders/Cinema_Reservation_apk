@@ -24,6 +24,7 @@ buildscript {
         navigation_fragment = "2.5.0"
         navigation_ui = "2.5.0"
         room_version = "2.4.2"
+        room_ktx = "2.4.2"
     }
 }
 
