@@ -1,12 +1,15 @@
 package com.example.rezervarecinemaiss.Database
 
 import com.example.rezervarecinemaiss.Data.*
+import io.reactivex.rxjava3.core.Completable
+import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
 class RoomRepository @Inject constructor(
     private val userDAO: UserDAO,
     private val movieDAO: MovieDAO,
-    private val reservationDAO: ReservationDAO
+    private val reservationDAO: ReservationDAO,
 ) {
 
     fun getAllUsers(): List<User> {
@@ -25,8 +28,8 @@ class RoomRepository @Inject constructor(
         return movieDAO.readAllMovies()
     }
 
-    fun insertMovie(movie: Movie) {
-        movieDAO.addMovie(movie)
+    suspend fun insertMovie(movie: Movie) {
+        return movieDAO.addMovie(movie)
     }
 
     fun nukeMovieTable() {

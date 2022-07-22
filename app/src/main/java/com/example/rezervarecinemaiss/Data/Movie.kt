@@ -1,8 +1,11 @@
 package com.example.rezervarecinemaiss.Data
 
-import androidx.room.Entity
-import androidx.room.Index
-import androidx.room.PrimaryKey
+import androidx.room.*
+
+
+// @Ignore - ignora o variabila
+// @Embedded - relatie intre tabele
+// @ColumnInfo - Denumire coloana tabel
 
 @Entity(tableName = "movie_table")
 data class Movie (
